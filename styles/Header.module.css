@@ -1,0 +1,80 @@
+/* tablet: 768px */
+/* desktop: 1440px */
+/* each section padding will be global */
+
+/* general */
+
+.top-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* modal wrapper */
+
+.modal-wrapper {
+  position: fixed;
+  inset: 0;
+  left: 30%;
+  background-color: hsl(0, 100%, 100%, 0.05);
+  backdrop-filter: blur(1.5rem);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.close-menu-btn {
+  align-self: flex-end;
+}
+
+/* site logo */
+
+@media screen and(max-width: 767px) {
+  .logo-wrapper svg {
+    transform: scale(0.84);
+  }
+}
+
+/* mobile modal wrapper */
+
+/* hamburger icon */
+
+.open-menu-btn,
+.close-menu-btn {
+  background-color: transparent;
+}
+
+/* mobile modal nav */
+
+[data-show-modal="false"].open-menu-btn + .modal-wrapper {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .mobile-icon-modal-wrapper {
+    display: none;
+  }
+  .moda-wrapper {
+    display: none;
+    z-index: revert;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .top-parent {
+    position: relative;
+  }
+  .top-parent::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    display: block;
+    width: 473px;
+    left: 150px;
+    top: 0;
+    bottom: 0;
+    margin-block: auto;
+    background-color: var(--color-misc);
+  }
+}

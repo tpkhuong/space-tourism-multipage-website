@@ -1,0 +1,277 @@
+/* title: barlow condensed*/
+/* span: barlow condensed*/
+/* tabpanel title: bellefair*/
+/* tab button: bellefair*/
+/* text: barlow*/
+
+/* color and font family */
+
+.tabpanel-subheading,
+.description {
+  color: var(--color-secondary);
+}
+
+.title,
+.tab-digit {
+  font-family: var(--secondary-font);
+}
+
+/* title-content-img-wrapper */
+
+.title-content-img-wrapper {
+  text-align: center;
+  margin-block-start: 24px;
+}
+
+/* page title */
+
+.page-title {
+  font-size: 1.1rem;
+  letter-spacing: 2.3px;
+  font-weight: normal;
+  /* grid-area: pagetitle; */
+}
+
+.page-title-digit {
+  color: var(--color-page-digit);
+  margin-inline-end: 8px;
+  font-weight: 700;
+}
+
+/* content-img wrapper */
+
+/* img wrapper */
+
+.img-wrapper {
+  margin-inline: -24px;
+  margin-block: 32px;
+}
+
+/* launch vehicle */
+
+/* [id="vehicle"].img-wrapper {
+  background-image: url("../starter-code/assets/technology/image-launch-vehicle-landscape.jpg");
+} */
+
+/* spaceport */
+/* [id="spaceport"].img-wrapper {
+  background-image: url("../starter-code/assets/technology/image-spaceport-landscape.jpg");
+} */
+
+/* space capsule */
+/* [id="capsule"].img-wrapper {
+  background-image: url("../starter-code/assets/technology/image-space-capsule-landscape.jpg");
+} */
+
+/* content/tablist/tab/tabpanel */
+
+/* tablist */
+
+@supports (display: flex) {
+  .tablist {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+}
+
+@supports not (display: flex) {
+  .tablist > * + * {
+    margin-inline-start: 16px;
+  }
+}
+
+/* tab/button */
+
+.techTab-btn {
+  padding: 0;
+  width: var(--btn-width, 40px);
+  height: var(--btn-height, 40px);
+  border-radius: 50%;
+}
+
+[aria-selected="true"].techTab-btn {
+  background-color: var(--color-neutral-white);
+}
+
+[aria-selected="false"].techTab-btn {
+  background-color: transparent;
+  color: var(--color-neutral-white);
+  border: 1px solid var(--color-page-digit);
+}
+
+.tab-digit {
+  font-size: 1.5rem;
+}
+
+/* tabpanel */
+
+.tabpanel {
+  margin-block-start: 26px;
+}
+
+.tabpanel-subheading {
+  font-size: 1.2rem;
+}
+
+/* title */
+
+.title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-block-start: 8px;
+  margin-block-end: 16px;
+}
+
+/* description */
+
+.description {
+  font-size: 1.1rem;
+}
+
+/* tablet */
+
+@media screen and (min-width: 48rem) {
+  /* title-content-img-wrapper */
+
+  .title-content-img-wrapper {
+    margin-block-start: 40px;
+  }
+
+  /* page title */
+
+  .page-title {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-align: left;
+  }
+
+  /* content-img wrapper */
+
+  /* img wrapper */
+  .img-wrapper {
+    margin-inline: 0;
+    margin-inline-start: -39px;
+    margin-block-start: 60px;
+    margin-block-end: 56px;
+  }
+  .imgElement {
+    width: 100%;
+  }
+
+  /* content/tablist/tab/tabpanel */
+  /* tablist */
+  /* tab/button */
+  .techTab-btn {
+    --btn-width: 60px;
+    --btn-height: 60px;
+  }
+  /* tabpanel */
+  .tabpanel {
+    margin-block-start: 44px;
+  }
+
+  .tabpanel-subheading {
+    font-size: 1.4rem;
+  }
+  /* title */
+  .title {
+    font-size: 2.5rem;
+    margin-block-end: 20px;
+  }
+  /* description */
+  .description {
+    font-size: 1.2rem;
+    width: 50ch;
+    margin-inline: auto;
+  }
+}
+
+/* desktop */
+
+@media screen and (min-width: 90rem) {
+  /* title-content-img-wrapper */
+  .title-content-img-wrapper {
+    margin-block-start: 76px;
+    max-width: 1275px;
+    margin-inline-start: auto;
+    padding-inline-start: 40px;
+  }
+  /* page title */
+  .page-title {
+    font-size: var(--heading5);
+  }
+  /* content-img wrapper */
+
+  .content-img-wrapper {
+    margin-block-start: 24px;
+    display: flex;
+  }
+
+  /* img wrapper */
+  .img-wrapper {
+    margin-inline: 0;
+    margin-inline-start: auto;
+    margin-block: 0;
+    order: 1;
+  }
+  .imgElement {
+  }
+
+  /* content/tablist/tab/tabpanel */
+
+  .content-wrapper {
+    display: flex;
+    gap: 80px;
+    align-self: center;
+  }
+
+  /* tablist */
+
+  .tablist {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 32px;
+  }
+
+  /* tab/button */
+
+  .techTab-btn {
+    --btn-width: 80px;
+    --btn-height: 80px;
+  }
+
+  /* hover/focus effect */
+
+  .techTab-btn:focus {
+    outline: 8px solid blue;
+  }
+
+  [aria-selected="false"].techTab-btn:hover,
+  [aria-selected="false"].techTab-btn:focus {
+    border-color: var(--color-neutral-white);
+  }
+
+  /* tabpanel */
+
+  .tabpanel {
+    text-align: left;
+    margin-block-start: revert;
+  }
+
+  /* title */
+
+  .title {
+    font-size: var(--heading3);
+    margin-block-start: 0;
+    margin-block-end: 10px;
+  }
+  /* description */
+
+  .description {
+    font-size: 1.3rem;
+    margin-inline: revert;
+    line-height: 1.8;
+  }
+}

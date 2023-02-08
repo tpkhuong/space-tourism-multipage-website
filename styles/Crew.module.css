@@ -1,0 +1,293 @@
+/* title: barlow condensed*/
+/* position: bellefair*/
+/* name: bellefair*/
+/* text: barlow*/
+
+/* color and font family */
+
+.position,
+.title {
+  font-family: var(--secondary-font);
+}
+
+/* grid */
+
+.title-content-img-wrapper {
+  text-align: center;
+  padding-block-start: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* page title */
+
+.page-title {
+  font-size: 1.1rem;
+  letter-spacing: 2.3px;
+  font-weight: normal;
+  /* grid-area: pagetitle; */
+}
+
+.page-title-digit {
+  color: var(--color-page-digit);
+  margin-inline-end: 8px;
+  font-weight: 700;
+}
+
+/* tablist/tabs/buttons */
+
+.content-wrapper {
+  order: 1;
+}
+
+/* tablist */
+
+.tablist {
+  margin-block-end: 32px;
+}
+
+.tablist > * + * {
+  margin-inline-start: 16px;
+}
+
+.crewTab-btn {
+  padding: 6px;
+  background-color: var(--color-page-digit);
+  border-radius: 50%;
+}
+
+/* when use select a button */
+
+[aria-selected="true"].crewTab-btn {
+  background-color: var(--color-neutral-white);
+}
+
+/* tabpanel */
+
+/* panel position */
+
+.position {
+  font-size: 1.2rem;
+  color: var(--color-misc);
+  text-transform: uppercase;
+}
+
+/* panel title */
+
+.title {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-block-end: 15px;
+}
+
+/* panel description */
+
+.description {
+  font-family: var(--description-font);
+  color: var(--color-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* img wrapper */
+
+.img-wrapper {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  align-self: center;
+}
+
+.img-wrapper::after {
+  content: "";
+  height: 2px;
+  background-color: var(--color-page-digit);
+  position: absolute;
+  left: -65px;
+  right: -65px;
+  bottom: 0;
+}
+
+/* tablet */
+
+@media screen and (min-width: 48rem) {
+  /* grid */
+
+  .title-content-img-wrapper {
+    min-height: 90.5%;
+    gap: 0;
+  }
+
+  /* page title */
+
+  .title-wrapper {
+    align-self: start;
+  }
+
+  .page-title {
+    font-size: 1.4rem;
+    letter-spacing: 2.3px;
+  }
+
+  .page-title-digit {
+    color: var(--color-page-digit);
+    margin-inline-end: 8px;
+    font-weight: 700;
+  }
+
+  /* tablist/tabs/buttons */
+
+  .content-wrapper {
+    /* grid */
+    order: revert;
+    margin-block: 60px;
+    margin-block-end: 40px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* tablist */
+
+  .tablist {
+    margin-block: 10px;
+    margin-block-end: 32px;
+    order: 1;
+  }
+
+  /* tabpanel */
+
+  /* panel position */
+
+  .position {
+    font-size: 1.5rem;
+  }
+
+  /* panel title */
+
+  .title {
+    font-size: 2.5rem;
+    margin-block-end: 15px;
+  }
+
+  /* panel description */
+
+  .description {
+    width: 49ch;
+  }
+
+  /* img wrapper */
+
+  .img-wrapper {
+    /* set explicit width and height so img will up parent element */
+    width: 500px;
+    height: 525px;
+    margin-block-start: auto;
+  }
+
+  .img-wrapper::after {
+    display: none;
+  }
+}
+
+/* desktop */
+
+@media screen and (min-width: 90rem) {
+  /* grid */
+
+  .title-content-img-wrapper {
+    max-width: 1240px;
+    min-height: 88%;
+    margin-inline-end: auto;
+    margin-inline-start: 145px;
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* page title */
+
+  .title-wrapper {
+    justify-self: start;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .page-title {
+    font-size: calc(var(--heading5) + 0.3rem);
+    letter-spacing: 2.5px;
+  }
+
+  .page-title-digit {
+    color: var(--color-page-digit);
+    margin-inline-end: 8px;
+    font-weight: 700;
+  }
+
+  /* tablist/tabs/buttons */
+
+  .content-wrapper {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0;
+    margin-block-end: 64px;
+    align-self: end;
+    text-align: left;
+  }
+
+  /* tablist */
+
+  .tablist {
+    margin: 0;
+    margin-block-start: 96px;
+    order: 1;
+  }
+
+  .crewTab-btn {
+    padding: 9px;
+  }
+
+  /* desktop layout only for hover/focus effect on select btn */
+
+  [aria-selected="false"].crewTab-btn:hover,
+  [aria-selected="false"].crewTab-btn:focus {
+    background-color: var(--color-misc);
+  }
+
+  /* tabpanel */
+
+  /* panel position */
+
+  .position {
+    font-size: var(--heading4);
+  }
+
+  /* panel title */
+
+  .title {
+    font-size: var(--heading3);
+    margin-block-end: 0;
+  }
+
+  /* panel description */
+
+  .description {
+    /* font-size: 1rem; */
+    font-size: 1.2rem;
+    width: 45ch;
+  }
+
+  /* img wrapper */
+
+  .img-wrapper {
+    /* set explicit width and height so img will up parent element */
+    grid-column: 2/3;
+    grid-row: 1 / span 2;
+    align-self: stretch;
+    width: 90%;
+    height: 100%;
+    margin-block-start: revert;
+  }
+}

@@ -1,0 +1,123 @@
+/* tablet: 768px */
+/* desktop: 1440px */
+
+/* rules/declarations declared here will be used like this className={styles.bgImg} or use styles["bg-img"] */
+
+/* span: barlow condensed*/
+/* h1: bellefair*/
+/* p: barlow*/
+/* button: bellefair*/
+
+/* mobile */
+
+/* moved declaration below to SectionWrapper.module.css which has all our declarations for bg img and padding */
+
+.content-btn-wrapper {
+  text-align: center;
+  margin-block-start: 58px;
+}
+
+.sub-heading,
+.description {
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+}
+
+.title {
+  font-size: 6rem;
+  font-family: var(--secondary-font);
+  font-weight: normal;
+}
+
+.description {
+  font-size: 0.9375rem;
+  font-family: var(--description-font);
+  line-height: 1.7;
+}
+
+.homebtn {
+  font-size: 1.5rem;
+  background-color: var(--color-neutral-white);
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-block-start: 148px;
+}
+
+/* tablet */
+/* moved declaration below to SectionWrapper.module.css which has all our declarations for bg img and padding */
+
+@media screen and (min-width: 768px) {
+  .content-btn-wrapper {
+    margin-block-start: 100px;
+    width: min-content;
+    margin-inline: auto;
+  }
+  .sub-heading {
+    font-size: 1.7rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 48ch;
+    margin-inline: auto;
+  }
+
+  .title {
+    font-size: var(--heading1);
+  }
+
+  .homebtn {
+    width: 242px;
+    height: 242px;
+  }
+}
+
+/* desktop */
+/* moved declaration below to SectionWrapper.module.css which has all our declarations for bg img and padding */
+
+@media screen and (min-width: 1440px) {
+  .content-btn-wrapper {
+    text-align: revert;
+    margin-block-start: 251px;
+    width: revert;
+    margin-inline: revert;
+    display: flex;
+    padding-inline: 165px;
+    justify-content: space-between;
+  }
+
+  .content-wrapper {
+    width: min-content;
+  }
+
+  .sub-heading {
+    font-size: 1.9rem;
+    letter-spacing: calc(var(--medium-text-space) + 1.3px);
+  }
+
+  .description {
+    font-size: 1.2rem;
+    max-width: 48ch;
+    margin-inline: revert;
+  }
+
+  .title {
+    font-size: var(--heading1);
+  }
+
+  .homebtn {
+    width: 274px;
+    height: 274px;
+    margin-block-start: revert;
+    align-self: flex-end;
+    letter-spacing: var(--large-text-space);
+  }
+
+  .homebtn:hover,
+  .homebtn:focus {
+    box-shadow: 0 0 0 75px hsla(0, 100%, 100%, 0.1);
+  }
+}

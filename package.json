@@ -1,0 +1,27 @@
+{
+  "name": "spacetourismwebsite",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpkhuong/space-tourism-multipage-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/tpkhuong/space-tourism-multipage-website/issues"
+  },
+  "homepage": "https://github.com/tpkhuong/space-tourism-multipage-website#readme"
+}

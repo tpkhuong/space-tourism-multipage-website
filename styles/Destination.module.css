@@ -1,0 +1,293 @@
+/* title: barlow condensed*/
+/* tab button: barlow condensed */
+/* tabpanel title: bellefair*/
+/* tabpanel text: barlow*/
+/* avg text: barlow condensed*/
+/* number: bellefair*/
+
+/* color and font family */
+
+.tab-wrapper,
+.description,
+.text {
+  color: var(--color-secondary);
+}
+
+.tabpanel .title,
+.digit {
+  font-family: var(--secondary-font);
+}
+
+.title-content-img-wrapper {
+  text-align: center;
+  padding-block-start: 24px;
+}
+
+/* page title */
+
+.page-title {
+  font-size: 1.1rem;
+  letter-spacing: 2.3px;
+  font-weight: normal;
+}
+
+.page-title-digit {
+  color: var(--color-page-digit);
+  margin-inline-end: 8px;
+}
+
+/* img */
+
+.img-wrapper {
+  width: 170px;
+  height: 170px;
+  margin-block-start: 32px;
+  margin-block-end: 26px;
+  margin-inline: auto;
+}
+
+/* tablist/tabs/buttons */
+
+.tab-wrapper {
+  position: relative;
+  background-color: transparent;
+  font-size: 1.1rem;
+  padding: 0;
+}
+
+.tablist-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.tab-wrapper {
+  background-color: transparent;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.bottom-line {
+  letter-spacing: 1px;
+}
+
+.tab-wrapper[aria-selected="true"] .bottom-line::after {
+  content: "";
+  height: 2px;
+  background-color: var(--color-neutral-white);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+}
+
+/* tabpanel */
+
+/* panel title */
+
+.title {
+  font-size: var(--heading3);
+  text-transform: uppercase;
+  margin-block-start: 14px;
+  margin-block-end: -12px;
+}
+
+/* panel description */
+
+.description {
+  font-family: var(--description-font);
+  font-size: 1rem;
+  margin-block-end: 32px;
+}
+
+/* panel distance and travel */
+
+.distance-travel-wrapper {
+  padding-block-start: 32px;
+  border-top-width: 1px;
+  border-top-color: var(--color-page-digit);
+  border-top-style: solid;
+}
+
+.distance,
+.travel {
+  display: flex;
+  flex-direction: column;
+}
+
+.travel {
+  margin-block-start: 12px;
+}
+
+/* text */
+
+.text {
+  font-size: 0.9rem;
+}
+
+/* digit */
+
+.digit {
+  font-size: calc(var(--heading5));
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .title-content-img-wrapper {
+    padding-block-start: 76px;
+  }
+  /* page title */
+  .page-title {
+    text-align: left;
+    font-size: 1.35rem;
+  }
+  /* img */
+  .img-wrapper {
+    width: 300px;
+    height: 300px;
+    margin-block-start: 60px;
+    margin-block-end: 53px;
+  }
+
+  /* tablist/tabs/buttons */
+
+  .content-wrapper {
+    width: min-content;
+    margin-inline: auto;
+  }
+
+  .tablist-wrapper {
+    gap: 52px;
+  }
+
+  .tab-wrapper {
+    font-size: 1.2rem;
+  }
+
+  .tab-wrapper[aria-selected="true"] .bottom-line::after {
+    bottom: -12px;
+  }
+
+  .bottom-line {
+    letter-spacing: 1px;
+  }
+
+  /* tabpanel */
+
+  /* panel title */
+
+  .title {
+    font-size: 5rem;
+    margin-block: 20px;
+    margin-block-end: -8px;
+  }
+
+  /* panel description */
+
+  .description {
+    width: 61ch;
+    margin-block-end: 48px;
+  }
+
+  /* panel distance and travel */
+
+  /* text */
+
+  .travel {
+    margin-block-start: revert;
+  }
+
+  /* digit */
+}
+
+@media screen and (min-width: 1440px) {
+  /* page title */
+  .page-title {
+    margin-inline-start: 148px;
+    font-size: var(--heading5);
+  }
+
+  /* content-img-wrapper */
+
+  .content-img-wrapper {
+    display: flex;
+    margin-block-start: 64px;
+    justify-content: space-evenly;
+  }
+
+  /* img */
+  .img-wrapper {
+    width: 405px;
+    height: 405px;
+    margin-block-start: revert;
+    margin-block-end: revert;
+    margin-inline: 0;
+    align-self: flex-end;
+  }
+
+  /* tablist/tabs/buttons */
+
+  .content-wrapper {
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .tablist-wrapper {
+    justify-content: revert;
+    gap: 35px;
+  }
+
+  .tab-wrapper {
+    font-size: 1.1rem;
+  }
+
+  .bottom-line {
+    letter-spacing: 1px;
+  }
+
+  /* tabpanel */
+
+  /* on hover of button show bottom line for desktop layout */
+
+  [aria-selected="false"].tab-wrapper:hover .bottom-line::after,
+  [aria-selected="false"].tab-wrapper:focus .bottom-line::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    background-color: var(--color-page-digit);
+  }
+
+  /* panel title */
+
+  .title {
+    font-size: var(--heading2);
+    margin-block: 8px;
+    margin-block-end: -8px;
+  }
+
+  /* panel description */
+
+  .description {
+    width: 46ch;
+    margin-block-end: 54px;
+    font-size: 1.125rem;
+  }
+
+  /* panel distance and travel */
+
+  .distance-travel-wrapper {
+    display: flex;
+  }
+
+  /* text */
+
+  .travel {
+    margin-block-start: revert;
+    margin-inline: auto;
+  }
+
+  /* digit */
+}

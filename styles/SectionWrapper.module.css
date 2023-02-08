@@ -1,0 +1,78 @@
+.app {
+  background-image: var(--page-bg-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  padding: var(--padding-large);
+}
+
+/* home/index */
+
+[id="home"].app {
+  --page-bg-img: url("/images/home/background-home-mobile.jpg");
+  padding-block-end: 48px;
+  height: 100%;
+}
+
+/* destination */
+[id="destination"].app {
+  --page-bg-img: url("/images/destination/background-destination-mobile.jpg");
+}
+/* crew */
+[id="crew"].app {
+  --page-bg-img: url("/images/crew/background-crew-mobile.jpg");
+}
+/* technology */
+[id="technology"].app {
+  --page-bg-img: url("/images/technology/background-technology-mobile.jpg");
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    padding: 0;
+    padding-inline-start: 39px;
+  }
+  /* home/index */
+
+  [id="home"].app {
+    --page-bg-img: url("/images/home/background-home-tablet.jpg");
+  }
+
+  /* destination */
+  [id="destination"].app {
+    --page-bg-img: url("/images/destination/background-destination-tablet.jpg");
+  }
+  /* crew */
+  [id="crew"].app {
+    --page-bg-img: url("/images/crew/background-crew-tablet.jpg");
+    height: 100%;
+  }
+  /* technology */
+  [id="technology"].app {
+    --page-bg-img: url("/images/technology/background-technology-tablet.jpg");
+  }
+}
+@media screen and (min-width: 1440px) {
+  .app {
+    padding-inline-start: 55px;
+    padding-block-start: 40px;
+  }
+  /* home/index */
+
+  [id="home"].app {
+    --page-bg-img: url("/images/home/background-home-desktop.jpg");
+  }
+
+  /* destination */
+  [id="destination"].app {
+    --page-bg-img: url("/images/destination/background-destination-desktop.jpg");
+  }
+  /* crew */
+  [id="crew"].app {
+    --page-bg-img: url("/images/crew/background-crew-tablet.jpg");
+  }
+  /* technology */
+  [id="technology"].app {
+    --page-bg-img: url("/images/technology/background-technology-desktop.jpg");
+  }
+}
